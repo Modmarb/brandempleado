@@ -1,17 +1,21 @@
-<div class="top-bar">
-    <div class="top-bar-left">
-      <ul class="dropdown menu" data-dropdown-menu>
-        <li class="menu-text">Empleados</li>
-        <li><a href="{% url 'empleados_app:empleados_all' %}">Listar</a></li>
-        <li><a href="{% url 'departamento_app:lista_departamento' %}">Departamentos</a></li>
-        <li><a href="{% url 'empleados_app:empleados_admin' %}">Administrar</a></li>
-        <li><a href="{% url 'departamento_app:nuevo_departamento' %}">Crear Departamento</a></li>
-      </ul>
-    </div>
-    <div class="top-bar-right">
-      <ul class="menu">
-        <li><input type="search" placeholder="Buscar empleado"></li>
-        <li><a href="{% url 'empleados_app:crear_empleado' %}" class="button">Registrar nuevo empleado</a></li>
-      </ul>
+<div class="grid-container">
+  <div class="grid-x">
+    <div class="cell top-bar">
+      <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li class="menu-text">Empleados</li>
+          <li><a href="/">Home</a></li>
+          <li><a href="{% url 'empleados_app:empleados_all' %}">Listar Empleados</a></li>
+          <li><a href="{% url 'departamento_app:lista_departamento' %}">Departamentos</a></li>
+          <li><a href="{% url 'empleados_app:empleados_admin' %}">Administrar Empleados</a></li>
+          <li><a href="{% url 'departamento_app:nuevo_departamento' %}">Crear Departamento</a></li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+          <li><a href="{% url 'empleados_app:crear_empleado' %}" class="button">Registrar nuevo empleado</a></li>
+        </ul>
+      </div>
     </div>
   </div>
+</div>
