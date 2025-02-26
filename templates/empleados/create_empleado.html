@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    Registrar un nuevo empleado
+{% endblock titulo %}
+
+{% block content %}
+{% include 'includes/header.html' %}
+<div class="grid-container">
+    <div class="grid-x">
+        <h1 class="cell">registrar empleado</h1>
+        <form class="cell callout secondary" method="POST" enctype="multipart/form-data">{% csrf_token %}
+            <div class="grid-container">
+                <div class="grid-x grid-padding-x">
+                    <div class="medium-6 cell">
+                        <label>Nombres:
+                            {{form.first_name}}
+                        </label>
+                    </div>
+                    <div class="medium-6 cell">
+                        <label>Apellidos:
+                            {{form.last_name}}
+                        </label>
+                    </div>
+                    <div class="medium-6 cell">
+                        <label>Cargo:
+                            {{form.job}}
+                        </label>
+                    </div>
+                    <div class="medium-6 cell">
+                        <label>Area:
+                            {{form.departamento}}
+                        </label>
+                    </div>
+                    <div class="medium-6 cell">
+                        <label>Habilidades
+                            {{form.habilidad}}
+                        </label>
+                    </div>
+                    <div class="medium-6 cell">
+                        <label>Foto
+                            {{form.avatar}}
+                        </label>
+                    </div>
+                    <div class="medium-12 cell">
+                        <label>
+                            <button type="submit" class="submit success button">Registrar</button>
+                        </label>
+                    </div>
+                </div>
+            </div>
+          </form>
+    </div>
+</div>
+{% endblock content %}
+
+<!-- <form method="POST">{% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Guardar</button>
+</form> -->

@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block titulo %}
+    {{object.full_name}}
+{% endblock titulo %}
+{% block content %}
+    {% include 'includes/header.html' %}
+
+    <div class="grid-container">
+
+        <div class="grid-x align-center">
+
+            <div class="cell large-6 card" style="width: 300px;">
+                <div class="card-divider">
+                  {{object.full_name}}
+                </div>
+                    
+                    {% if object.avatar %}
+                        <img src="{{object.avatar.url}}">
+                    {% else %}
+                        <img src="{% static 'img/sinfoto.jpg' %}">
+                    {% endif %}
+                <div class="card-section">
+                    <h4>{{object.get_job_display}}</h4>
+                    <p>Nombres: {{object.first_name}}</p>
+                    <p>Apellidos: {{object.last_name}}</p>
+                    <p>Area: {{object.departamento}}</p>
+                    <p>
+                        Habilidades:
+                        <ul>
+                        
+                            {% for h in object.habilidad.all %}
+                                <li>
+                                    {{h.habilidad}}
+                                </li>
+                            {% endfor %}
+                                
+                        </ul>
+                    </p>
+                </div>
+            </div>
+
+            <!-- <div class="cell large-6">
+                <h1>Detalle del cliente</h1>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th width="200">Dato</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                            <tr>
+                                <td>Nombre</td>
+                                <td>{{object.first_name}}</td>
+                            </tr>
+                            <tr>
+                                <td>Apellido</td>
+                                <td>{{object.last_name}}</td>
+                            </tr>
+                            <tr>
+                                <td>Nombre Completo</td>
+                                <td>{{object.full_name}}</td>
+                            </tr>
+                            <tr>
+                                <td>Cargo</td>
+                                <td>{{object.get_job_display}}</td>
+                            </tr>
+                            <tr>
+                                <td>Area</td>
+                                <td>{{object.departamento}}</td>
+                            </tr>
+                            <tr>
+                                <td>Habilidades</td>
+                                <td>{{object.habilidad}}</td>
+                            </tr>
+                            <tr>
+                                <td>Foto</td>
+                                <td>
+                                    {% if object.avatar %}
+                                        <img src="{{ object.avatar.url }}">
+                                    {% else %}
+                                        <img src="{% static 'img/img1.jpg' %}">
+                                    {% endif %}
+                                </td>
+                            </tr>
+            
+                </table>
+
+            </div> -->
+
+        </div>
+
+    </div>
+
+{% endblock content %}
+
+
+
+
+<h1>detalle empleado</h1>
+
+<!-- <h2>{{titulo1}}</h2>
+<h2>{{titulo2}}</h2> -->
+
+
+
+<h3>todos los datos</h3>
+<p>{{object.first_name}}</p>
+<p>{{object.last_name}}</p>
+<p>{{object.job}}</p>
+<p>{{object.departamento}}</p>
+<p>{{object.habilidad}}</p>
