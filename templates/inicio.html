@@ -6,50 +6,52 @@
     
 {% block content %}
     {% include 'includes/header.html' %}
-    <h1>pagina de inicio</h1>
-    <!--inicio de la imagen de la portada-->
-    <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
-        <div class="orbit-wrapper">
-            <div class="orbit-controls">
-                <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
-                <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+    <div class="grid-container">
+        <h1>DILAN CARE MONDA</h1>
+        <!--inicio de la imagen de la portada-->
+        <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+            <div class="orbit-wrapper">
+                <div class="orbit-controls">
+                    <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+                    <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+                </div>
+                <ul class="orbit-container">
+                    <li class="is-active orbit-slide">
+                        <figure class="orbit-figure">
+                            <img class="orbit-image" src="{% static 'img/img1.jpg' %}" alt="Space">
+                            <figcaption class="orbit-caption">Space, the final frontier.</figcaption>
+                        </figure>
+                    </li>
+                    <li class="orbit-slide">
+                        <figure class="orbit-figure">
+                            <img class="orbit-image" src="{% static 'img/img2.jpg' %}" alt="Space">
+                            <figcaption class="orbit-caption">Lets Rocket!</figcaption>
+                        </figure>
+                    </li>
+                </ul>
             </div>
-            <ul class="orbit-container">
-                <li class="is-active orbit-slide">
-                    <figure class="orbit-figure">
-                        <img class="orbit-image" src="{% static 'img/img1.jpg' %}" alt="Space">
-                        <figcaption class="orbit-caption">Space, the final frontier.</figcaption>
-                    </figure>
-                </li>
-                <li class="orbit-slide">
-                    <figure class="orbit-figure">
-                        <img class="orbit-image" src="{% static 'img/img2.jpg' %}" alt="Space">
-                        <figcaption class="orbit-caption">Lets Rocket!</figcaption>
-                    </figure>
-                </li>
-            </ul>
+            <nav class="orbit-bullets">
+                <button class="is-active" data-slide="0">
+                    <span class="show-for-sr">First slide details.</span>
+                    <span class="show-for-sr" data-slide-active-label>Current Slide</span>
+                </button>
+                <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+            </nav>
         </div>
-        <nav class="orbit-bullets">
-            <button class="is-active" data-slide="0">
-                <span class="show-for-sr">First slide details.</span>
-                <span class="show-for-sr" data-slide-active-label>Current Slide</span>
-            </button>
-            <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
-        </nav>
-    </div>
-    <!--fin de la imagen de la portada-->
+        <!--fin de la imagen de la portada-->
 
-    <!--inicio bloque de bienvenida-->
-        <div class="grid-x align-center" >
-            <h1 class="cell large-8" style="font-size: 30px; text-align: center;">Bienvenido al sistema de registro de empleados</h1>
-            <div class="cell large-7">
-                <div class="callout success">
-                    <h5>Registre y controla empleados</h5>
-                    <p>Registre y controla empleados Registre y controla empleados Registre y controla empleados.</p>
-                    <a href="#">Ver empleados.</a>
+        <!--inicio bloque de bienvenida-->
+            <div class="grid-x align-center" >
+                <h1 class="cell large-8" style="font-size: 30px; text-align: center;">Bienvenido al sistema de registro de empleados</h1>
+                <div class="cell large-7">
+                    <div class="callout success">
+                        <h5>Registre y controla empleados</h5>
+                        <p>Registre y controla empleados Registre y controla empleados Registre y controla empleados.</p>
+                        <a href="#">Ver empleados.</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    <!--fin de bloque de bienvenida-->
+        <!--fin de bloque de bienvenida-->
+    </div>
 {% endblock content %}
     
